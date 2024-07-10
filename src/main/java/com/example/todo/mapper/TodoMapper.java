@@ -8,5 +8,8 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface TodoMapper {
-    List<TodoDto> map(List<Todo> todos);
+    TodoDto toDto(Todo todo);
+    Todo toEntity(TodoDto todoDto);
+    List<TodoDto> toDtoList(List<Todo> todos);
+    List<Todo> toEntityList(List<TodoDto> dtos);
 }

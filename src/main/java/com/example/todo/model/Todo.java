@@ -18,6 +18,9 @@ public class Todo {
 
     private String message;
 
+    @Column(nullable = false)
+    private Boolean isDone = false;
+
     @CreationTimestamp
     private Timestamp createdAt;
 }
